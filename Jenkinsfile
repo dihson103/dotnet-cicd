@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Access the Jenkins Docker container and change directory
-                    docker.image('jenkins').inside {
+                    docker.image('khaliddinh/jenkins:latest').inside {
                         sh 'cd /var/jenkins_home/workspace/DotnetTestCiCd'
                     }
                 }
