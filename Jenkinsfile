@@ -24,6 +24,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo Current location: $(pwd)'
+                    sh 'docker compose build'
                     // Run docker-compose
                     sh 'docker compose up -d'
                 }
