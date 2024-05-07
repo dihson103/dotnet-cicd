@@ -39,7 +39,7 @@ services:
     environment:
       - ConnectionStrings__DefaultConnection=Server=postgres:5432;User Id=postgres;Password=postgres;Database=testcicd
     ports:
-      - 5000:8080
+      - 5050:8080
     depends_on:
       - postgres
     networks:

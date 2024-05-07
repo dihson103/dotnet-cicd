@@ -25,7 +25,7 @@ pipeline {
                 script {
                     sh 'echo Current location: $(pwd)'
                     // Run docker-compose
-                    sh 'docker-compose up -d'
+                    sh 'docker compose up -d'
                 }
             }
         }
