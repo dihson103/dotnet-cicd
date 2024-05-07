@@ -23,6 +23,7 @@ pipeline {
         stage('Run docker compose') {
             steps {
                 script {
+                    sh 'echo Current location: $(pwd)'
                     // Run docker-compose
                     sh 'docker-compose up -d'
                 }
