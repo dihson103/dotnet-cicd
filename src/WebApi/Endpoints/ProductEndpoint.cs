@@ -14,6 +14,11 @@ public class ProductEndpoint : CarterModule
     }
     public override void AddRoutes(IEndpointRouteBuilder app)
     {
+        app.MapGet("/test", () =>
+        {
+            return Results.Ok("Hello dinh son");
+        });
+
         app.MapGet("/", async (ISender sender) =>
         {
             List<GetProductResponse> result = await sender.Send(new GetProductsQuery());
